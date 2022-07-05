@@ -17,12 +17,10 @@ export default function Item(props: Props) {
           <p> {description} </p>
         </div>
         <div className={styles.item__tags}>
-          <div className={classNames(
-            styles.item__tipo,
-            styles[`item__tipo__${category.label.toLocaleLowerCase()}`]
-          )}>
-            {category.label}
-          </div>
+          <div className={classNames({
+            [styles.item__tipo]: true,
+            [styles[`item__tipo__${category.label.toLowerCase()}`]]: true
+          })}> {category.label}</div>
           <div className={styles.item__porcao}>
             {size}g
           </div>
