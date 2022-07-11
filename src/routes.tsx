@@ -13,7 +13,6 @@ export default function AppRouter() {
     <main className={'container'}>
       <Router>
         <Menu />
-
         <Routes>
           <Route path='/' element={<PaginaPadrao />} >
             <Route index element={<Inicio />} />
